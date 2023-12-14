@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <style>
+           @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
+           
+           body{
+            background: black;
+            overflow: hidden;
+            font: 10vw/100vh "Anton";
+            text-align: center;
+            color: transparent;
+            backface-visibility: hidden;
+           }
+
+           span{
+            display: inline-block;
+            text-shadow: 0 0 0 whitesmoke;
+            animation: animationSmoke 5s 3s infinite; /* Loop */
+            /* animation: animationSmoke 5s 3s both */
+           }
+
+
+           span:nth-child(even){
+            animation-name: animationSmokeMirror;
+           }
+
+           @keyframes animationSmoke{
+            60%{text-shadow: 0 0 40px whitesmoke;}
+            to{
+                transform: 
+                translate3d(15rem, -8rem,0)
+                rotate(-40deg)
+                skewX(70deg)
+                scale(1.5);
+                text-shadow: 0 0 20px whitesmoke;                
+                opacity: 0;
+            }
+           }
+
+           @keyframes animationSmokeMirror{
+            60%{text-shadow: 0 0 40px whitesmoke;}
+            to{
+                transform: 
+                translate3d(18rem, -8rem,0)
+                rotate(-40deg)
+                skewX(-70deg)
+                scale(2);
+                text-shadow: 0 0 20px whitesmoke;
+                opacity: 0;
+            }
+           }
+           
+
+        </style>
+    </head>
+    <body>
+        <span>S</span>
+        <span>E</span>
+        <span>R</span>
+        <span>D</span>
+        <span>A</span>
+        <span>R</span>
+        <span>&nbsp;</span>
+        <span>K</span>
+        <span>A</span>
+        <span>R</span>
+        <span>A</span>
+        <span>C</span>
+        <span>A</span>
+
+    </body>
+</html>
